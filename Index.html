@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos Executor - Premium Access</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #ffffff;
+            --background-dark: rgb(26, 21, 21);
+            --background-light: rgba(37, 33, 33, 0.9);
+            --text-color: #ffffff;
+            --highlight-color: #f1faee;
+            --glow-color: rgba(230, 57, 70, 0.5);
+            --hover-glow-color: rgba(255, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background-dark);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: -100px;
+            max-width: 150px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 60px 0 20px;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+            animation: pulse 2s infinite;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 30px 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 45px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: auto;
+            margin-top: 20px;
+            box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+        }
+
+        .download-btn:hover {
+            background-color: #d62839;
+            transform: translateY(-3px);
+            box-shadow: 0 0 10px var(--hover-glow-color), 0 0 20px var(--hover-glow-color);
+        }
+
+        .executor-image {
+            display: block;
+            margin: 40px auto;
+            max-width: 100%;
+            height: auto;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .executor-image:hover {
+            box-shadow: 0 0 20px var(--hover-glow-color), 0 0 40px var(--hover-glow-color);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature {
+            background-color: var(--background-light);
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px var(--hover-glow-color), 0 0 20px var(--hover-glow-color);
+        }
+
+        .feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .links {
+            margin-top: 50px;
+        }
+
+        .links a {
+            color: #ffffff;
+            background-color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .links a:hover {
+            background-color: #d62839;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 10px rgba(230, 57, 70, 0.7);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(230, 57, 70, 0.9);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(230, 57, 70, 0.7);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 1.5rem; }
+            p { font-size: 1rem; }
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Chronos Executor Logo" class="logo">
+        <img src="title.png" alt="Chronos Executor Title" style="max-width: 600px; margin-bottom: 20px;">
+        <h2 data-aos="fade-up" data-aos-delay="200">Bringing You the Future of Exploiting!</h2>
+
+        <p data-aos="fade-up" data-aos-delay="500">
+            We stand out as the most trusted provider, relied upon by countless users for our exclusive software.
+        </p>
+
+        <a href="https://mega.nz/file/5SlmhbYK#8x3PtPEpOKn6zxWIQJNzlxFnVyQbHPvbznFskkF1bKw" class="download-btn" download>Download Now</a>
+
+        <img src="executor.png" alt="Executor UI" class="executor-image" data-aos="fade-up" data-aos-delay="600">
+
+        <div class="features" data-aos="fade-up" data-aos-delay="1300">
+            <div class="feature">
+                <h3>Fast Performance</h3>
+                <p>Chronos is optimized for speed, ensuring you get the best performance while exploiting.</p>
+            </div>
+            <div class="feature">
+                <h3>User-Friendly Interface</h3>
+                <p>Our sleek and intuitive UI makes it easy for anyone to use Chronos.</p>
+            </div>
+            <div class="feature">
+                <h3>Regular Updates</h3>
+                <p>Stay ahead with frequent updates that keep you in sync with the latest features.</p>
+            </div>
+            <div class="feature">
+                <h3>Community Support</h3
+                <p>Join our active community for support, tips, and sharing experiences.</p>
+            </div>
+            <div class="feature">
+                <h3>High UNC Percentage</h3>
+                <p>Our very secure executor has a 86% UNC rating. Meaning it can execute most scripts without crashes or errors.</p>
+            </div>
+            <div class="feature">
+                <h3>Advanced Customization</h3>
+                <p>Tailor your exploiting experience with customizable features and settings.</p>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://discord.gg/chronos" target="_blank">
+                <i class="fab fa-discord"></i> Join Our Discord
+            </a>
+            <a href="https://support.chronos.com" target="_blank">
+                <i class="fas fa-life-ring"></i> Support
+            </a>
+        </div>
+    </div>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
